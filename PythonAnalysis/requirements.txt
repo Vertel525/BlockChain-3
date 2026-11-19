@@ -1,0 +1,2 @@
+# Šiame variante naudojama tik Python standartinė biblioteka.
+# RPC užklausos siunčiamos per bitcoin-cli (subprocess), kaip leidžia užduoties aprašas.
