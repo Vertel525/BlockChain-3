@@ -3,12 +3,12 @@ import subprocess
 from decimal import Decimal
 from pathlib import Path
 
-DEFAULT_DATADIR = Path.home() / "bitcoin-regtest-mif"
+DEFAULT_DATADIR = Path(r"C:\Users\matas\bitcoin-regtest-mif")
 
 
 def bitcoin_cli(*args, wallet=None, datadir=None):
     data_dir = Path(datadir) if datadir else DEFAULT_DATADIR
-    command = ["bitcoin-cli", "-regtest", f"-datadir={data_dir}"]
+    command = ["/mnt/c/Program Files/Bitcoin/daemon/bitcoin-cli.exe", "-regtest", f"-datadir={data_dir}"]
     if wallet:
         command.append(f"-rpcwallet={wallet}")
     command.extend(str(arg) for arg in args)
